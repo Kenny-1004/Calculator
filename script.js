@@ -21,7 +21,8 @@ function deleteKey(){
 function calculate (){
 
     try{
-        display.value = eval(display.value)
+        display.value = display.value.replaceAll("X", "*");
+        display.value = eval(display.value);
     }
     catch(error){
         display.value = "Error";
